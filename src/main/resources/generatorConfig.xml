@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<!-- <classPathEntry location="/home/xbob/Downloads/mysql-connector-java-5.1.26-bin.jar" 
+		/> -->
+	<context id="context1">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.1.19:3308/pmf" userId="pmfopr"
+			password="Iamsure$12345654" />
+
+		<javaTypeResolver>
+			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.infoengine.dal.model"
+			targetProject="D:\workspaces\MySpringMVC1\src\main\java">
+			<property name="enableSubPackages" value="false" />
+			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="sqlmapper"
+			targetProject="D:\workspaces\MySpringMVC1\src\main\resources" />
+
+		<javaClientGenerator targetPackage="com.infoengine.dal.dao"
+			targetProject="D:\workspaces\MySpringMVC1\src\main\java" type="XMLMAPPER" />
+
+		<table schema="" tableName="t_pmf_da_todisable"
+			   domainObjectName="DaToDisableDO" enableInsert="true"
+			   enableSelectByPrimaryKey="true" enableCountByExample="true"
+			   enableUpdateByExample="true" enableDeleteByExample="true"
+			   enableSelectByExample="true" selectByExampleQueryId="true">
+		</table>
+		<!--<table schema="" tableName="t_pmf_deposit_agreement"
+			domainObjectName="DepositAgreementDO" enableInsert="true"
+			enableSelectByPrimaryKey="true" enableCountByExample="true"
+			enableUpdateByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" selectByExampleQueryId="true">
+		</table>-->
+
+
+		<!--<table schema="" tableName="t_pmf_loan_task" domainObjectName="LoanTaskDO"
+			enableInsert="true" enableSelectByPrimaryKey="true"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>-->
+
+		<!-- <table schema="" tableName="T_YIMALL_FINANCE_PRODUCT" domainObjectName="YimallProductRecordDO" 
+			/> -->
+
+		<!--<table schema="" tableName="t_pmf_contract" domainObjectName="ContractDO" 
+			enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" selectByExampleQueryId="true"/> -->
+
+		<!--<table schema="" tableName="t_pmf_debt_flow_record" domainObjectName="DebtFlowRecordDO" 
+			enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" selectByExampleQueryId="true"/> -->
+
+		<!-- <table schema="" tableName="t_pmf_debt_pool" domainObjectName="DebtPoolDO" 
+			enableInsert="true" enableSelectByPrimaryKey="true" enableCountByExample="true" 
+			enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" 
+			selectByExampleQueryId="true"/> -->
+
+		<!-- <table schema="" tableName="t_pmf_loan_batch" domainObjectName="LoanBatchDO" 
+			enableInsert="true" enableSelectByPrimaryKey="true" enableCountByExample="true" 
+			enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" 
+			selectByExampleQueryId="true"/> -->
+
+		<!-- <table schema="" tableName="T_PMF_LOAN_BATCH_FILE" domainObjectName="LoanBatchFileDO" 
+			enableInsert="true" enableSelectByPrimaryKey="true" enableCountByExample="true" 
+			enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" 
+			selectByExampleQueryId="true" /> -->
+
+		<!--<table schema="" tableName="t_pmf_partner" domainObjectName="PartnerDO" 
+			enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" selectByExampleQueryId="true"/> <table schema="" 
+			tableName="t_pmf_principal" domainObjectName="PrincipalDO" enableCountByExample="true" 
+			enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" 
+			selectByExampleQueryId="true"/> <table schema="" tableName="t_pmf_product" 
+			domainObjectName="ProductDO" enableCountByExample="true" enableUpdateByExample="true" 
+			enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/> -->
+
+
+	</context>
+</generatorConfiguration>

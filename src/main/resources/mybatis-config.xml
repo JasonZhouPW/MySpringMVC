@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="lazyLoadingEnabled" value="false" />
+	</settings>
+	<typeAliases>
+        <typeAlias alias="ContractDO" type="com.pinganfu.pmf.common.dal.model.ContractDO" />
+        <typeAlias alias="DebtFlowRecordDO" type="com.pinganfu.pmf.common.dal.model.DebtFlowRecordDO" />
+        <typeAlias alias="DebtPoolDO" type="com.pinganfu.pmf.common.dal.model.DebtPoolDO" />
+        <typeAlias alias="LoanBatchDO" type="com.pinganfu.pmf.common.dal.model.LoanBatchDO" />
+        <typeAlias alias="LoanWorkingOrderDO" type="com.pinganfu.pmf.common.dal.model.LoanWorkingOrderDO" />
+        <typeAlias alias="PartnerDO" type="com.pinganfu.pmf.common.dal.model.PartnerDO" />
+        <typeAlias alias="PrincipalDO" type="com.pinganfu.pmf.common.dal.model.PrincipalDO" />
+        <typeAlias alias="ProductDO" type="com.pinganfu.pmf.common.dal.model.ProductDO" />
+        <typeAlias alias="ReceiveMQFLowDO" type="com.pinganfu.pmf.common.dal.model.ReceiveMQFLowDO" />
+        <typeAlias alias="ProdRechargeDO" type="com.pinganfu.pmf.common.dal.model.ProdRechargeDO" />
+	</typeAliases>
+</configuration>
