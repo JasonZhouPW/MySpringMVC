@@ -2,15 +2,16 @@ package com.infoengine.servcie.impl;
 
 import com.infoengine.dal.dao.DaToDisableDao;
 import com.infoengine.service.interfaces.TestService;
-
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Zhoupeiwen on 2016/6/21.
  */
+@Service
 public class TestServiceImpl implements TestService {
 
-    @Resource
+    @Autowired
     private DaToDisableDao daToDisableDao;
 
     @Override
