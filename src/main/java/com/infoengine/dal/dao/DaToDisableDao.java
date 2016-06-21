@@ -5,7 +5,7 @@ import com.infoengine.dal.model.DaToDisableDOExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface DaToDisableDOMapper {
+public interface DaToDisableDao {
     int countByExample(DaToDisableDOExample example);
 
     int deleteByExample(DaToDisableDOExample example);

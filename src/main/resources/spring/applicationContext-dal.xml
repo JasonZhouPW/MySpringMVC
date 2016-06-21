@@ -29,9 +29,9 @@
 
 	<!-- Mybatis mapper -->
 
-	<bean id="rechargeOffDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<bean id="daToDisableDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface"
-				  value="com.pinganfu.pmf.common.dal.dao.RecharegeOffDao" />
+				  value="com.infoengine.dal.dao.DaToDisableDao" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
