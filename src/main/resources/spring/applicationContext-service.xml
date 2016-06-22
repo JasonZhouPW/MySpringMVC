@@ -13,7 +13,7 @@
 	http://www.springframework.org/schema/tx/spring-tx.xsd"
        default-autowire="byName">
 
-    <!--<context:component-scan base-package="com.infoengine.*"></context:component-scan>-->
+    <context:component-scan base-package="com.infoengine.*"></context:component-scan>
 
    <!-- <tx:annotation-driven transaction-manager="transactionManager"/>-->
 

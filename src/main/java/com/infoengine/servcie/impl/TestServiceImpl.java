@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by Zhoupeiwen on 2016/6/21.
  */
-@Service
+@Service("testService")
 public class TestServiceImpl implements TestService {
 
     @Autowired
