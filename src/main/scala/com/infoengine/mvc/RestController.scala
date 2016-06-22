@@ -1,6 +1,7 @@
 package com.infoengine.mvc
 
 import org.springframework.stereotype.Controller
+import org.springframework.ui.ModelMap
 import org.springframework.web.bind.annotation.{ResponseBody, PathVariable, RequestMethod, RequestMapping}
 
 /**
@@ -15,7 +16,7 @@ class RestController {
 
     println(s"id is $id")
 
-    return "/hello";
+    return "/hello"
   }
 
   @ResponseBody
@@ -26,4 +27,13 @@ class RestController {
 
     return s"{id:$id}"
   }
+
+
+
+    @RequestMapping(value = Array("/redirect"))
+    def redirect(mod: ModelMap):String = {
+      mod.addAttribute("message", "redirect")
+      "hello"
+    }
+
 }
