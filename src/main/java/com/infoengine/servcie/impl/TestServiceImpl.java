@@ -16,7 +16,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String getInfo(Long Id) {
-        return daToDisableDao.selectByPrimaryKey(1l).toString();
+        return daToDisableDao.selectByPrimaryKey(1l).getDaBelongDate();
     }
 
     public DaToDisableDao getDaToDisableDao() {
