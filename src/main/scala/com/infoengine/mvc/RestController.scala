@@ -1,8 +1,9 @@
 package com.infoengine.mvc
 
+import com.infoengine.mvc.module.User
 import org.springframework.stereotype.Controller
 import org.springframework.ui.ModelMap
-import org.springframework.web.bind.annotation.{ResponseBody, PathVariable, RequestMethod, RequestMapping}
+import org.springframework.web.bind.annotation._
 
 /**
  * Created by Zhoupeiwen on 2016/6/22.
@@ -18,6 +19,19 @@ class RestController {
 
     return "/hello"
   }
+
+  @RequestMapping(value = Array("/input"))
+  def newUser():String = {
+    "forms"
+  }
+
+  @RequestMapping(value = Array("/user/new"))
+  def newUserInput(user:User,mod: ModelMap):String = {
+    println(s"id:${user.getId}")
+    mod.addAttribute("message",s"welcome:${user.getName}" )
+    "hello"
+  }
+
 
   @ResponseBody
   @RequestMapping(value = Array("/json/{id}"),method = Array(RequestMethod.GET))
