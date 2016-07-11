@@ -12,4 +12,6 @@ public interface TestService {
 
 
     String getInfo(Long Id);
+
+    int addInfo();
 }
