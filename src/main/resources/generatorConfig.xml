@@ -10,8 +10,8 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.1.19:3308/pmf" userId="pmfopr"
-			password="Iamsure$12345654" />
+			connectionURL="jdbc:mysql://121.43.162.227:3306/mainbase" userId="opt"
+			password="Yiheopt01!" />
 
 		<javaTypeResolver>
 			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
@@ -19,20 +19,20 @@
 		</javaTypeResolver>
 
 		<javaModelGenerator targetPackage="com.infoengine.dal.model"
-			targetProject="D:\workspaces\MySpringMVC1\src\main\java">
+			targetProject="C:\Users\Yeah-1\IdeaProjects\MySpringMVC\src\main\java">
 			<property name="enableSubPackages" value="false" />
 			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator targetPackage="sqlmapper"
-			targetProject="D:\workspaces\MySpringMVC1\src\main\resources" />
+			targetProject="C:\Users\Yeah-1\IdeaProjects\MySpringMVC1\src\main\resources" />
 
 		<javaClientGenerator targetPackage="com.infoengine.dal.dao"
-			targetProject="D:\workspaces\MySpringMVC1\src\main\java" type="XMLMAPPER" />
+			targetProject="C:\Users\Yeah-1\IdeaProjects\MySpringMVC\src\main\java" type="XMLMAPPER" />
 
-		<table schema="" tableName="t_pmf_da_todisable"
-			   domainObjectName="DaToDisableDO" enableInsert="true"
+		<table schema="" tableName="T_WEIWEB_USER"
+			   domainObjectName="UserDO" enableInsert="true"
 			   enableSelectByPrimaryKey="true" enableCountByExample="true"
 			   enableUpdateByExample="true" enableDeleteByExample="true"
 			   enableSelectByExample="true" selectByExampleQueryId="true">

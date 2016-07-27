@@ -5,6 +5,6 @@
 		<setting name="lazyLoadingEnabled" value="false" />
 	</settings>
 	<typeAliases>
-        <typeAlias alias="DaToDisableDO" type="com.infoengine.dal.model.DaToDisableDO" />
+        <typeAlias alias="UserDO" type="com.infoengine.dal.model.UserDO" />
     </typeAliases>
 </configuration>

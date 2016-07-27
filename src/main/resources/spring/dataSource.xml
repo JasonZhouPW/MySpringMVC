@@ -11,9 +11,9 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://192.168.1.19:3308/pmf"></property>
-        <property name="username" value="pmfopr"></property>
-        <property name="password" value="Iamsure$12345654"></property>
+        <property name="url" value="jdbc:mysql://121.43.162.227:3306/mainbase"></property>
+        <property name="username" value="opt"></property>
+        <property name="password" value="Yiheopt01!"></property>
     </bean>
 
 <!--    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
