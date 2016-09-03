@@ -52,7 +52,7 @@ class RestController {
 
     println(s"id is $id")
 
-    return s"{id:$id}"
+     s"{id:$id}"
   }
 
 
