@@ -75,10 +75,6 @@ class CommandPack {
     seqNo
   }
 
-  def getReminderCallBack(callback:(String) => Unit) = {
-
-  }
-
   override def toString: String = s"{header:$header,data=$data,itemCount=$itemCount,items=$items,respond=$respond}"
 
 }

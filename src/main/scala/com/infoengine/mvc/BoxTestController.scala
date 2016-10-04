@@ -54,15 +54,11 @@ class BoxTestController {
       index += 8 + header.len*2
 
     }
-/*    if(needCallBack){
-      val nb = new StringBuffer().append(TimeUtil.getHexString(cmdCount.toString) + TimeUtil.getHexString((respond.length/2).toLong.toHexString))
-      respond = nb.append("00").append(respond)
-    }else{*/
 
       val nb = new StringBuffer().append(TimeUtil.getHexString(cmdCount.toString) + TimeUtil.getHexString((respond.length/2).toLong.toHexString))
       respond = nb.append("00").append(respond)
       //todo save db
-//    }
+
 
     logger.info(commands.toString)
 
