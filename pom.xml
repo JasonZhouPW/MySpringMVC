@@ -151,6 +151,16 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -184,6 +194,10 @@
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
                             <port>8088</port>
                         </connector>
+<!--                        <connector implementation="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
+                            <port>9443</port>
+                            &lt;!&ndash;<password>changeit</password>&ndash;&gt;
+                        </connector>-->
                     </connectors>
                 </configuration>
             </plugin>

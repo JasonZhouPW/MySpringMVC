@@ -6,15 +6,15 @@ import java.util.Date
 /**
   * Created by Yeah-1 on 2016/8/27.
   */
-object TimeUtil extends App{
+object TimeUtil {
 
-  val sdf:SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+
 
 
   def getHexString(num:String) = if(Integer.parseInt(num,16) <= 15) "0" + num else num
 
   def getTimeHex(date:Date):String = {
-
+    val sdf:SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     val defaultDate = sdf.parse("2000-01-01 00:00:00")
     val gap = (date.getTime - defaultDate.getTime)/1000
     val list:List[String] = List(getHexString((gap & 0xFF).toHexString),
@@ -26,7 +26,7 @@ object TimeUtil extends App{
   }
 
   def getTimeFromHexStr(fromDate:String,timeHexStr:String):Date = {
-
+    val sdf:SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
 
     val time1 = Integer.parseInt(timeHexStr.substring(0, 2), 16)
     val time2 = Integer.parseInt(timeHexStr.substring(2, 4), 16)
