@@ -15,7 +15,7 @@ class CommandPack {
   var itemCount:Int = _
   var items:List[CommandItem] = _
   var respond:String = _
-
+  var boxSeqNo:String = _
 
   def setHeader(head:CommandHeader) = {
     this.header = head
@@ -27,7 +27,9 @@ class CommandPack {
       // 药盒查询是否有未同步的提醒信息
         //test for no plan
         //todo get the new plan from db
-        //if yes "E3" else "23"
+        //todo query by the boxseqno, if the boxSeqnois null ,the report an error
+
+        //todo if yes "E3" else "23"
         respond = "230900" + "8A" + "01" + "24" + TimeUtil.getTimeHex(new Date) + "010000"
       case 0xbf =>
       //设备识别号应答
@@ -74,6 +76,8 @@ class CommandPack {
     }
     seqNo
   }
+
+  def setBoxSeqNo(no:String):Unit = this.boxSeqNo = no
 
   override def toString: String = s"{header:$header,data=$data,itemCount=$itemCount,items=$items,respond=$respond}"
 

@@ -2,6 +2,8 @@ package com.infoegin.pillbox.util
 
 import java.util.Date
 
+import scala.util.Random
+
 /**
   * Created by Yeah-1 on 2016/8/27.
   */
@@ -15,7 +17,7 @@ object RespondUtil {
     val count = 1
     val cmdBody = TimeUtil.getHexString(count.toString) + cmdName + TimeUtil.getTimeHex(new Date) + status + "0000"
     val len = revers((cmdBody.length/2).toLong.toHexString)
-    val checkSum = "AA" //todo decide the method
+    val checkSum = getRandomCheckSum //todo decide the method
     cmdPrefix + len + checkSum + cmdBody
   }
 
@@ -30,5 +32,11 @@ object RespondUtil {
   }
 
   def getDeviceSycnRespond = "23090098" + "01" + "BF" + TimeUtil.getTimeHex(new Date) + "000000"
+
+  def getRandomCheckSum:String = {
+    val r = new Random()
+    val ret = r.nextInt(255).toLong.toHexString
+    if(ret.length > 2) ret.substring(0,2) else ret
+  }
 }
 
